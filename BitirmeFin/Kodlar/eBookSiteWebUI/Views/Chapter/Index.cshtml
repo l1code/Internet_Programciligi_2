@@ -1,0 +1,55 @@
+﻿@model IEnumerable<eBookSiteWebUI.Entity.Chapter>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container pb-5">
+    <h2>Bölüm Listesi</h2>
+    <hr />
+    <p>
+        @Html.ActionLink("Yeni Bölüm Ekle", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Novel.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChapterCount)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Novel.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChapterCount)
+                </td>
+                <td style="width:160px">
+                    @Html.ActionLink("Güncelle", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-sm " })
+                    @Html.ActionLink("Silme", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm " })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

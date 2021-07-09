@@ -1,0 +1,36 @@
+﻿@model IEnumerable<eBookSiteWebUI.Entity.Genre>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container pb-5">
+    <h2>Kitap Tür Listesi</h2>
+    <hr />
+    <p>
+        @Html.ActionLink("Yeni Tür Ekle", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width:40%">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td >
+                    @Html.ActionLink("Güncelle", "Edit", new { id = item.Id },new {@class="btn btn-primary btn-sm ml-5 mr-3" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm ml-3" })
+                </td >
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,139 @@
+.jumbotron{
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+  body > .container {
+    padding: 60px 15px 0;
+  }
+  
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  code {
+    font-size: 80%;
+  }
+ 
+.bookmarks img{
+  width: 40px;
+  height: 40px;
+
+  
+}
+
+.count-comment img{
+  width: 50px;
+  height: 50px;
+}
+
+.details_content{
+  margin-top: 80px;
+}
+
+.chapter-release-date{
+  padding-left: 200px;
+}
+
+div a{
+  color: #103a49;
+}
+
+div a:hover{
+  text-decoration: none;
+  color: #16b8f3;
+}
+
+
+
+.ozet{
+font-size: 25px;
+}
+.summary-content a{
+  font-size: 18px;
+}
+
+div ul li{
+  list-style: none;
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+.chapter-readmore span{
+  margin-left: 350px;
+  font-size: 18px;
+ 
+  
+}
+
+.summary-readmore span{
+  margin-left: 350px;
+  font-size: 18px;
+}
+
+.avatar{
+  
+  width: 100px;
+  height: 100px;
+
+}
+
+.select-picker-chapter {
+  float: left;
+  margin-right: 550px;
+  
+}
+.select-pagination{
+  float: left;
+  text-align: center;
+  margin-left: 310px;
+}
+
+.nav-previous{
+background-color: #e9ecef;
+border-radius: 5px;
+}
+
+.nav-next{
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.select-picker-pagination{
+  margin-top:50px
+}
+
+.font{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 50;
+  line-height: 2.4;
+}

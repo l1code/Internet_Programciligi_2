@@ -1,0 +1,41 @@
+﻿@using eBookSiteWebUI.Entity;
+@model IEnumerable<Genre>
+@{ 
+    var selectedGenre = Url.RequestContext.RouteData.Values["id"];
+}
+
+<div class="list-group">
+
+    <a class="list-group-item " href="/Novel/Index">Tüm Kitaplar</a>
+    @foreach (var genre in Model)
+    {
+
+        if (selectedGenre != null)
+        {
+            if (genre.Id == int.Parse(selectedGenre.ToString()))
+            {
+                <a href="/Novel/Index/@genre.Id" class="list-group-item list-group-item-action active ">
+                    @genre.Name
+                </a>
+            }
+            else
+            {
+                <a href="/Novel/Index/@genre.Id" class="list-group-item list-group-item-action  ">
+                    @genre.Name
+                </a>
+            }
+        }
+        else
+        {
+            <a href="/Novel/Index/@genre.Id" class="list-group-item list-group-item-action  ">
+                @genre.Name
+            </a>
+        }
+
+
+
+    }
+</div>
+
+
+

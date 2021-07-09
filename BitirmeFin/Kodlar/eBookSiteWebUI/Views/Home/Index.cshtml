@@ -1,0 +1,34 @@
+﻿@using eBookSiteWebUI.Models;
+@model IEnumerable<NovelsModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Hoşgeldin!</h1>
+        <p class="lead">İstediğin tarza ve türde kitapları oku!</p>
+        <hr class="my-4">
+        <p>Gel sende bu heyecanlı maceraya katıl!</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/Home/Privacy" role="button">Daha Oku</a>
+        </p>
+    </div>
+
+
+</div>
+
+
+
+<div class="container pb-5">
+    <div class="card-deck">
+        @Html.Partial("_NovelList", Model)
+    </div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,249 @@
+﻿@using eBookSiteWebUI.Entity;
+@model Novel
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">@Model.Name</a></li>
+        </ol>
+    </nav>
+
+    <h1 class="pb-3"> <a href="">@Model.Name</a> </h1>
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <img src="/theme/img/lm.jpg" class="img-fluid rounded   " />
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="summary_content-wrap">
+                        <div class="summary_content">
+
+                            <div class="summary_content_item mb-5">
+                                <div class="summary-heading float-sm-left mr-4 ">
+                                    <h5>Yazar :</h5>
+                                </div>
+                                <div class="summary-content">
+                                    <a href="">@Model.Name</a>
+                                </div>
+                            </div>
+
+                            <div class="summary_content_item mb-5">
+                                <div class="summary-heading float-sm-left mr-4">
+                                    <h5>Türler :</h5>
+                                </div>
+                                <div class="summary-content">
+                                    <div class="genres-content">
+                                        <a href="">@Model.GenreId</a>,
+                                        <a href="">Adventure</a>,
+                                        <a href="">Mecha</a>,
+                                        <a href="">Sci-fi</a>,
+                                        <a href="">Seinen</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="summary_content_item mb-5">
+                                <div class="summary-heading float-sm-left mr-4">
+                                    <h5>Görüntülenme :</h5>
+                                </div>
+                                <div class="summary-content">
+                                    <span> 12012  izlenme</span>
+                                </div>
+                            </div>
+
+                            <div class="summary_content_item mb-5">
+                                <div class="summary-heading float-sm-left mr-4">
+                                    <h5>Puan :</h5>
+                                </div>
+                                <div class="summary-content">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="badge badge-success">53</span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+
+                    <div class="summary_content_item mb-5">
+                        <div class="summary-heading float-sm-left mr-4">
+                            <h5>Durum :</h5>
+                        </div>
+                        <div class="summary-content">
+                            <span class="badge badge-primary">@Model.Status</span>
+                        </div>
+                    </div>
+
+                    <div class="summary_content_item mb-5">
+                        <div class="summary-heading float-sm-left mr-4">
+                            <h5>Bölüm Durumu :</h5>
+                        </div>
+                        <div class="summary-content">
+                            <span class="badge badge-primary">1212</span>
+
+                        </div>
+                    </div>
+
+                    <div class="summary_content_item mb-5">
+                        <div class="summary-heading float-sm-left mr-4">
+                            <i class="fas fa-bookmark fa-2x"></i>
+                        </div>
+                        <div class="summary-content">
+                            <span class="badge badge-primary">12 bookmarked</span>
+
+                        </div>
+                    </div>
+
+                    <div class="summary_content_item mb-5">
+                        <div class="summary-heading float-sm-left mr-4">
+                            <i class="fas fa-comments fa-2x"></i>
+                        </div>
+                        <div class="summary-content">
+                            <span class="badge badge-primary">0 comments</span>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="details_content ">
+        <i class="fas fa-star fa-2x float-left mr-4 "></i>
+        <p class="ozet">ÖZET</p>
+
+        <p>
+            @Model.Summary
+        </p>
+
+
+
+        <div class="summary-readmore">
+
+            <span class="btn btn-link " style="display:inline-block">
+                Show More
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Bölümler</a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Yorumlar</a>
+
+        </li>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="listing-chapters mt-5">
+                <div>
+                    <i class="fas fa-star fa-2x float-left mr-4 "></i>
+                    <h4>Son Eklenen Bölümler</h4>
+                </div>
+
+
+                <ul>
+                    <!-- Buraya otomatikman gelecek -->
+
+                    <li>
+                        <a href="/Novel/Chapter/@Model.Id">Chapter 1277 - Continuous Benefits, Leek Harvesting Skill</a>
+                        <span class="chapter-release-date">
+                            <i>March 29,2021</i>
+                        </span>
+                    </li>
+
+                    
+                </ul>
+
+
+                <div class="chapter-readmore">
+                    <span class="btn btn-link  chapter-readmore less-chap">Show More</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="chapter-comments">
+
+                <div class="row border border-dark mt-4">
+                    <div class="col-md-4 border-right border-dark">
+
+                        <div class="row mt-4 ">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6 text-center">
+                                <h5>Ali Baran</h5>
+
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-8 mt-4">
+                        <p>
+                            Yorumlar bu kısıma yazılacaktır.Yorumlar bu kısıma yazılacaktır.Yorumlar bu kısıma yazılacaktır.Yorumlar bu kısıma yazılacaktır.Yorumlar bu kısıma yazılacaktır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
